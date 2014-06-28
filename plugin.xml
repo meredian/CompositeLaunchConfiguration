@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension
+            point="org.eclipse.debug.core.launchConfigurationTypes">
+        <launchConfigurationType
+                delegate="com.sidelnikov.plugins.composite.CompositeLauchConfigurationDelegate"
+                id="com.sidelnikov.plugins.composite.launcher"
+                modes="run, debug"
+                name="%launchConfigurationType.name">
+        </launchConfigurationType>
+    </extension>
+    <extension
+            point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+        <launchConfigurationTypeImage
+                configTypeID="com.sidelnikov.plugins.composite.launcher"
+                icon="icons/sample.gif"
+                id="comp.launching.image">
+        </launchConfigurationTypeImage>
+    </extension>
+    <extension
+            point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+        <launchConfigurationTabGroup
+                class="com.sidelnikov.plugins.composite.CompositeLaunchConfigurationTabGroup"
+                id="com.sidelnikov.plugins.composite.launcher.CompositeTabGroup"
+                type="com.sidelnikov.plugins.composite.launcher">
+        </launchConfigurationTabGroup>
+    </extension>
+
+</plugin>
